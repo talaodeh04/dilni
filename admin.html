@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="admin-page">
+
+  <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+
+  <div class="sidebar" id="adminSidebar">
+    <h2>Dilni Admin</h2>
+    <a href="admin.html">📄 Manage Reports</a>
+    <a href="users.html">👥 Users</a>
+    <a href="locations.html">📍 Locations</a>
+    <a href="settings.html">⚙️ Settings</a>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      <h1>Dashboard Overview</h1>
+      <a href="#" class="logout" onclick="logout()">Logout</a>
+    </div>
+
+    <div id="statsContainer" class="stats">
+      <div class="stat-card profile" id="adminProfileCard">
+        <h3>Admin Profile</h3>
+        <p id="dashName">Name: ...</p>
+        <p id="dashEmail">Email: ...</p>
+        <p id="dashRole">Role: ...</p>
+        <p id="dashStatus">Status: ...</p>
+        <a href="profile.html">View Profile</a>
+      </div>
+
+      <div class="stat-card approved">
+        <h3>✅ Approved Reports</h3>
+        <p id="approvedCount">--</p>
+      </div>
+      <div class="stat-card pending">
+        <h3>🕒 Pending Reports</h3>
+        <p id="pendingCount">--</p>
+      </div>
+      <div class="stat-card rejected">
+        <h3>❌ Rejected Reports</h3>
+        <p id="rejectedCount">--</p>
+      </div>
+      <div class="stat-card users">
+        <h3>👥 Total Users</h3>
+        <p id="totalUsersCount">--</p>
+      </div>
+    </div>
+
+    <div class="main-header">
+      <h1>Manage Reports</h1>
+      <select id="filterSelect" style="padding: 6px 12px; border-radius: 6px;">
+        <option value="all">All</option>
+        <option value="pending">Pending</option>
+        <option value="approved">Approved</option>
+        <option value="rejected">Rejected</option>
+      </select>
+    </div>
+
+    <div id="reportsContainer" class="cards">
+    </div>
+  </div>
+
+  <script type="module" src="js/logout.js"></script>
+  <script type="module" src="js/admin-reports.js"></script>
+  <script type="module" src="js/profile.js"></script>
+  <script type="module" src="js/auth.js"></script>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("adminSidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+</body>
+</html>

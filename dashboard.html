@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class ="dashboard-page">
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Dilni Logo">
+      </div>
+      
+      <nav class="nav-center">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="map.html">Map</a>
+        <a href="report.html">Report</a>
+        <a href="guide.html">Guide</a>
+        <a href="admin.html">Admin</a>
+        <a href="about.html">About</a>
+      </nav>
+  
+      <div class="nav-right">
+        <a href="#" class="logout" onclick="logout()">Logout</a>
+
+      </div>
+    </div>
+  </header>
+  
+
+  <div class="container">
+    <h1>Welcome to Dilni</h1>
+    <p class="description">
+      Your platform for real-time updates, safety alerts, and discovering local services and destinations across Palestine.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/map.png" alt="Map Icon">
+        <h3>View Map</h3>
+        <a href="map.html">Open Interactive Map</a>
+      </div>
+
+      <div class="card">
+        <img src="images/new-message.png" alt="Report Icon">
+        <h3>Submit Report</h3>
+        <a href="report.html">Report an Incident</a>
+      </div>
+
+      <div class="card">
+        <img src="images/location.png" alt="Tourist Icon">
+        <h3>Tourist Guide</h3>
+        <a href="guide.html">Explore Attractions</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+  <script type="module" src="js/logout.js"></script>
+
+</body>
+</html>

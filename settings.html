@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Settings</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="admin-page">
+
+  <div class="sidebar">
+    <h2>Dilni Admin</h2>
+    <a href="admin.html">📊 Dashboard</a>
+    <a href="users.html">👥 Manage Users</a>
+    <a href="locations.html">📍 Locations</a>
+    <a href="settings.html">⚙️ Settings</a>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      <h1>System Settings</h1>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Notification Settings</h3>
+        <p>Enable or disable real-time alerts for users.</p>
+        <div class="action-buttons">
+          <button class="btn approve" id="enableNotifications">Enable</button>
+          <button class="btn reject" id="disableNotifications">Disable</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Language Preferences</h3>
+        <p>Choose default system language:</p>
+        <select id="languageSelect" style="margin-top: 10px; padding: 6px; border-radius: 6px;">
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+        </select>
+      </div>
+
+      <div class="card">
+        <h3>Access Control</h3>
+        <p>Define roles allowed to add/edit data:</p>
+        <label><input type="checkbox" id="adminOnly" checked> Admins Only</label><br>
+        <label><input type="checkbox" id="verifiedUsers"> Verified Users</label><br>
+        <label><input type="checkbox" id="publicUsers"> Public Users</label>
+      </div>
+
+      <div class="card">
+        <h3>System Maintenance</h3>
+        <p>Put the system in maintenance mode to update content.</p>
+        <div class="action-buttons">
+          <button class="btn reject" id="activateMaintenance">Activate</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="js/settings.js"></script>
+</body>
+</html>

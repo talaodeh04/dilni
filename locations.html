@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Manage Locations</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    #map { height: 400px; margin-top: 20px; border-radius: 10px; }
+    .filter-group select {
+      margin-right: 10px;
+      padding: 6px 12px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body class="admin-page">
+
+  <div class="sidebar">
+    <h2>Dilni Admin</h2>
+    <a href="admin.html">📊 Dashboard</a>
+    <a href="users.html">👥 Manage Users</a>
+    <a href="locations.html">📍 Locations</a>
+    <a href="settings.html">⚙️ Settings</a>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      <h1>Manage Locations</h1>
+      <button class="btn add-user">+ Add New Location</button>
+    </div>
+
+    <div class="filter-group">
+      <select id="statusFilter">
+        <option value="all">All Statuses</option>
+        <option value="Approved">Approved</option>
+        <option value="Pending">Pending</option>
+      </select>
+      <select id="cityFilter">
+        <option value="all">All Cities</option>
+      </select>
+      <span id="locationCount" style="margin-left: 15px; font-weight: bold;"></span>
+    </div>
+
+    <form id="addLocationForm" style="display:none; margin: 20px 0;" class="add-user-form">
+      <input type="text" id="locName" placeholder="Location Name" required />
+      <input type="text" id="locCity" placeholder="City" required />
+      <input type="text" id="locCategory" placeholder="Category" required />
+      <input type="number" id="locLat" placeholder="Latitude" step="any" required />
+      <input type="number" id="locLng" placeholder="Longitude" step="any" required />
+      <button class="btn approve" type="submit">Create</button>
+    </form>
+
+    <div class="cards" id="locationsContainer"></div>
+
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script type="module" src="js/locations.js"></script>
+</body>
+</html>

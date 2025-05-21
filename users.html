@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Manage Users</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="admin-page">
+
+  <div class="sidebar">
+    <h2>Dilni Admin</h2>
+    <a href="admin.html">📊 Dashboard</a>
+    <a href="users.html">👥 Manage Users</a>
+    <a href="locations.html">📍 Locations</a>
+    <a href="settings.html">⚙️ Settings</a>
+    <a href="login.html" class="logout">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      <h1>Manage Users</h1>
+      <button class="btn add-user">+ Add New User</button>
+    </div>
+
+    <form id="addUserForm" style="display:none; margin-bottom: 30px;" class="add-user-form">
+      <input type="text" id="newName" placeholder="Full Name" required />
+      <input type="email" id="newEmail" placeholder="Email" required />
+      <input type="password" id="newPassword" placeholder="Password" required />
+      <select id="newRole" required>
+        <option value="General User">General User</option>
+        <option value="Admin">Admin</option>
+        <option value="Tourist Guide">Tourist Guide</option>
+      </select>
+      <button class="btn approve" type="submit">Create</button>
+    </form>
+
+<div class="main-header">
+  <label for="roleFilter"><strong>Filter by Role:</strong></label>
+  <select id="roleFilter" style="padding: 6px 12px; border-radius: 6px;">
+    <option value="all">All</option>
+    <option value="Admin">Admin</option>
+    <option value="Tourist Guide">Tourist Guide</option>
+    <option value="General User">General User</option>
+  </select>
+</div>
+<div class="main-header">
+  <label for="statusFilter"><strong>Filter by Status:</strong></label>
+  <select id="statusFilter" style="padding: 6px 12px; border-radius: 6px;">
+    <option value="all">All</option>
+    <option value="Active">Active</option>
+    <option value="Inactive">Inactive</option>
+  </select>
+</div>
+
+
+
+    <div class="cards">
+    </div>
+  </div>
+
+  <script type="module" src="js/users.js"></script>
+
+</body>
+</html>

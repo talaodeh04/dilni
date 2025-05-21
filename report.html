@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Submit Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+ 
+  <link rel="stylesheet" href="css/style.css" />
+
+</head>
+<body class ="report-page">
+
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="images/logo.png" alt="Dilni Logo">
+      </div>
+      
+      <nav class="nav-center">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="map.html">Map</a>
+        <a href="report.html">Report</a>
+        <a href="guide.html">Guide</a>
+        <a href="admin.html">Admin</a>
+        <a href="about.html">About</a>
+      </nav>
+  
+      <div class="nav-right">
+        <a href="#" class="logout" onclick="logout()">Logout</a>
+      </div>
+    </div>
+  </header>
+  
+  
+      
+  <div class="container">
+    <h2>Incident Details</h2>
+    <form id="reportForm"> 
+      <label for="title">Title</label>
+      <input type="text" id="title" placeholder="Enter report title" required>
+
+      <label for="description">Description</label>
+      <textarea id="description" rows="4" placeholder="Describe the incident..." required></textarea>
+
+      <label for="category">Category</label>
+      <select id="category" required>
+        <option value="">Select Category</option>
+        <option>Danger Zone</option>
+        <option>Medical Emergency</option>
+        <option>Resource Distribution</option>
+        <option>Other</option>
+      </select>
+
+      <label for="media">Upload Image or Video (optional)</label>
+      <input type="file" id="media" accept="image/*,video/*">
+
+      <label for="location">Location (optional)</label>
+      <input type="text" id="location" placeholder="Enter location or coordinates">
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </div>
+  <script type="module" src="js/auth.js"></script>
+  <script type="module" src="js/logout.js"></script>
+  <script type="module" src="js/report.js"></script>
+
+</body>
+</html>

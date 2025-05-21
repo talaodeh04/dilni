@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dilni – Interactive Map</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="map-page">
+
+  <header>
+    <div class="navbar">
+      <div class="logo"><img src="images/logo.png" alt="Dilni Logo"></div>
+      <nav class="nav-center">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="map.html">Map</a>
+        <a href="report.html">Report</a>
+        <a href="guide.html">Guide</a>
+        <a href="admin.html">Admin</a>
+        <a href="about.html">About</a>
+        <a href="login.html" class="logout">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="filter-container">
+    <form id="filterForm">
+      <label><input type="checkbox" value="danger" checked> Danger</label>
+      <label><input type="checkbox" value="medical" checked> Medical</label>
+      <label><input type="checkbox" value="resources" checked> Resources</label>
+    </form>
+  </div>
+
+  <div id="map" style="height: 80vh;"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.awesome-markers@2.0.5/dist/leaflet.awesome-markers.min.js"></script>
+  <script src="js/map.js"></script>
+  <script type="module" src="js/logout.js"></script>
+
+</body>
+</html>
