@@ -5,10 +5,6 @@
 ## 🌐 Live Demo
 > Not available publicly
 
-## 📸 Screenshots
-![Dashboard Screenshot](images/screenshot-dashboard.png)
-![Map Screenshot](images/screenshot-map.png)
-
 ## ✨ Features
 
 - 🗺️ Interactive Map (Leaflet.js)
